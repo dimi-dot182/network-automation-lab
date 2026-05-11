@@ -1,6 +1,9 @@
-[
-    {"hostname": "CORE-SW-01", "ip": "10.0.0.1", "status": "down"},
-    {"hostname": "DIST-SW-01", "ip": "10.0.0.10", "status": "down"},
-    {"hostname": "ACCESS-SW-01", "ip": "10.0.1.100", "status": "up"},
-    {"hostname": "RTR-EDGE-01", "ip": "172.16.0.1", "status": "up"}
-]
+{ 
+    "device_name": "Edge-Router-01",
+    "management_ip": "192.168.1.1",
+    "interfaces": [
+        "GigabitEthernet1",
+        "GigabitEthernet2"
+    ],
+    "status": "Production"
+}
