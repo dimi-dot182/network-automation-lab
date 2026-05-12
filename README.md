@@ -39,4 +39,4 @@ python inventory_validator.py
 In the fiber industry, data integrity is critical. A single missing field in a GIS (Geographic Information System) export can lead to field intervention failures. This lab focuses on creating scripts that ensure every fiber node, splitter, and OLT entry is technically valid before deployment.
 
 Author: Dimitri - Aspiring Network Automation Architect
-**Contact:** [Dimitri - Linkedin Profile] (linkedin.com/in/dimitri-duperron)
+Contact: [linkedin.com/in/dimitri-duperron]
