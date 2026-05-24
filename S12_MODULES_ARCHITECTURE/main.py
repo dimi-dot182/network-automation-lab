@@ -13,7 +13,7 @@ print("--- Lancement de l'Orcheetrateur Principal ---")
 
 # Appel des fonctions via le namespace du module
 banner_cli = cisco_builders.generate_banner(router_config["motd"])
-int_cli = generate_interface(
+int_cli = cisco_builders.generate_interface(
     router_config["interface"],
     router_config["ip"],
     router_config["mask"]

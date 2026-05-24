@@ -1,0 +1,8 @@
+hostname RTR-SINGAPOUR-01
+!
+interface GigabitEthernet0/0/1
+    description ** BACKBONE MAIN LINK TO OSP INTERCONNECT **
+    ip address 10.254.1.2 255.255.255.252
+    no shutdown
+!
+end
