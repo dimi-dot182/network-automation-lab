@@ -1,0 +1,15 @@
+{
+    "valid_hosts": [
+        {
+            "line": 2,
+            "ip_address": "172.16.5.254",
+            "status": "APPROVED"
+        },
+        {
+            "line": 6,
+            "ip_address": "10.0.25.1",
+            "status": "APPROVED"
+        }
+    ],
+    "corrupted_hosts": []
+}
