@@ -5,3 +5,8 @@
 
 # Ou si tu ranges tout dans un dossier data/ dédié :
 # data/
+
+# Ignorer tous les fichiers Excel
+*.xlsx
+*.xls
+*.csv
