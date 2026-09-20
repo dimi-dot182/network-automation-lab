@@ -1,4 +1,7 @@
-__pycache__/
-*.py[cod]
-.vscode/
-.DS_Store
+# Fichiers Excel et bureautique sensibles
+*.xlsx
+*.xls
+*.csv
+
+# Ou si tu ranges tout dans un dossier data/ dédié :
+# data/
