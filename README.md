@@ -1,28 +1,22 @@
-# 🌐 Network Automation & Infrastructure as Code (IaC) Lab
+# 🏗️ OSP Infrastructure & Spatial Data Automation Lab
 
-Welcome to my production-ready repository dedicated to modern network architecture and automation frameworks. This repository serves as a live ledger of enterprise-grade automation solution deployments, transitioning complex telecommunication infrastructures into scalable, software-defined environments.
+Welcome to my production-ready repository dedicated to Outside Plant (OSP) engineering, Heavy Civils project controls, and spatial data pipelines. This repository serves as a live ledger of enterprise-grade ETL data normalization and GIS automation, transitioning complex multi-project field data into scalable, zero-touch architectures.
 
 ## 🛠️ Technical Stack & Environment
 * **OS:** English Enterprise Environment (Production Standards)
-* **Language:** Python 3.12+ (CPython Engine)
-* **Version Control:** Git / GitHub (Advanced branching, conflict resolution, and history management)
-* **Target Architectures:** Cisco IOS, JSON-driven multi-vendor orchestration
-
----
+* **Language:** Python 3.12+ (Pandas, openpyxl, PyQGIS)
+* **Database & Routing:** PostgreSQL / PostGIS (Spatial Data Normalization)
+* **Version Control:** Git / GitHub (Advanced branching, Data Leak Prevention)
+* **Target Architectures:** Zero-Touch ETL Pipelines, Agnostic Spatial Databases, Executive Dashboards (Looker Studio)
 
 ## 🚀 Core Architecture Sessions Ledger
 
-### 📂 S12 | Modular Architecture & Namespace Safety
-* **Objective:** Decouple monolithic scripting into scalable enterprise modules.
-* **Key Achievements:** * Separated business logic (`cisco_builders.py`) from execution orchestration (`main.py`).
-  * Implemented strict Namespace Safety rules to mitigate runtime function collisions.
-  * Secured local unit testing boundaries using pythonic `__name__ == '__main__'` constructs.
-* **Production Value:** Reduces structural technical debt. Changing CLI syntax requires a 1-line update in the module instead of refactoring 50 disparate script files, preventing production downtime during major OS migrations.
+### 🏗️ CORE 1 : Cloud-Native Automation Engine (Data Pipeline & ETL)
+* **[2026-09-24] S02 - Version Control Resilience & Data Privacy :** Implemented strict `.gitignore` boundaries for OSP Multi-Sheet agency files, isolating `src/` from `data/` to prevent Data Breaches and unblock deployment pipelines.
+* **[2026-09-20] S01 - OSP ETL Data Normalization MVP :** Validated dynamic `.xlsx` parsing using Pandas and openpyxl. Engineered a `COLUMN_MAPPING` dictionary with `fillna` mechanisms to route distinct OSP domain entities (Tramway T8, LGV33) into strict Star Schema keys, eradicating GIGO.
 
-### 📂 S11 | Structured Data Validation (JSON Automation)
-* **Objective:** Abstract hardware configurations into standard data exchange formats.
-* **Production Value:** Replaced manual CLI entry with programmatic rendering, eliminating human syntax errors during multi-site switch deployments.
+### 🚜 CORE 3 : Scalable Heavy Infrastructure
+* **[2026-08-15] S18 - MOOVEO Spatial ETL & Data Decoupling :** Architected a decoupled spatial data flow to handle heavy utility relocations. Integrated geographic constraints with infrastructure project schedules to anticipate physical clashes and reduce schedule variance.
 
-### 📂 S10 | Network Configuration Parsers
-* **Objective:** Programmatically ingest and audit legacy router configurations.
-* **Production Value:** Automates infrastructure readiness mapping, speeding up auditing workflows by 85%.
+### 📊 CORE 4 : Executive Authority & Financial Controls
+* **[2026-08-15] S18 - Power Query & Business Intelligence :** Bridged spatial constraints from the MOOVEO ETL with financial datasets via Power Query. Automated the ingestion of multi-source trackers to feed executive dashboards, driving Cost Avoidance on complex OSP deployments.
