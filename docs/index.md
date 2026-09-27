@@ -4,7 +4,7 @@
 This portfolio documents the continuous transition of physical telecommunications infrastructure (Heavy Civils, Submarine Cables, Long-Haul) into software-defined, automated data pipelines.
 
 ### 🏗️ CORE 1 : Cloud-Native Automation Engine & Data Resilience
-* **[2026-09-24]
+* [2026-09-24]
 
 The Challenge: Tier-1 infrastructure projects generate chaotic field data. Fragmented subcontractors and heterogeneous spreadsheets create Garbage In, Garbage Out (GIGO) and expose confidential financial metadata on unsecured networks.
 
