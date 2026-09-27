@@ -1,3 +1,8 @@
+# ====================================================
+# CORE 1 - SESSION [Date] : MULTI-SHEET PARSING
+# ====================================================
+# [Ton ancien code de parsing ici]
+
 import pandas as pd
 import os
 
@@ -77,3 +82,46 @@ def ingest_multisheet_excel(filepath):
 if __name__ == "__main__":
     target_workbook = "ODAL 2026.09.11 - Exemple de Colonne sur Tableau de suivi.xlsx"
     ingest_multisheet_excel(target_workbook)
+
+# ====================================================
+# CORE 3 - SESSION [Date] : OSP DATA CONTRACT & ROUTING
+# ====================================================
+# [Le bloc de vérification HOST_INFRASTRUCTURE ici]
+
+import pandas as pd
+import numpy as np
+
+# 1. INGESTION (Création de la variable df - La ligne ne doit PAS être commentée)
+# Remplace "NOM_DE_L_ONGLET_MERIGNAC" par le nom exact écrit sur l'onglet dans Sheets/Excel
+df = pd.read_excel("data/ODAL 2026.09.11 - Exemple de Colonne sur Tableau de suivi.xlsx", 
+    sheet_name="Modèle Suivi DEV GC + FO Mérign")
+
+# 2. DATA CONTRACT (Vérification de df)
+target_col = 'HOST_INFRASTRUCTURE'
+
+if target_col not in df.columns:
+    raise KeyError(f"CRITICAL GIGO ALERT: The column '{target_col}' is missing from the source file. Pipeline halted.")
+
+mask_active_gc = (df['GC'].notna()) & (df['GC'].astype(str).str.strip().str.upper() != 'NA')
+invalid_rows = df[mask_active_gc & df[target_col].isna()]
+
+if not invalid_rows.empty:
+    error_msg = f"DATA CORRUPTION: {len(invalid_rows)} active GC interventions are missing a '{target_col}'. Fix the source Excel file."
+    raise ValueError(error_msg)
+
+print("Data Contract Validated. Proceeding to GC/FO Split...")
+
+# 3. SPATIAL ROUTING & NORMALIZATION (Le Split)
+print("Initiating Spatial Routing...")
+
+# Route A : Flux Génie Civil (GC)
+mask_gc = (df['GC'].notna()) & (df['GC'].astype(str).str.strip().str.upper() != 'NA')
+df_gc = df[mask_gc].copy()
+df_gc['TYPE_RESEAU'] = 'GC' # Standardisation forcée
+
+# Route B : Flux Fibre Optique (FO / Optique)
+mask_fo = (df['Optique'].notna()) & (df['Optique'].astype(str).str.strip().str.upper() != 'NA')
+df_fo = df[mask_fo].copy()
+df_fo['TYPE_RESEAU'] = 'FO' # Standardisation forcée
+
+print(f"Routing System Check: {len(df_gc)} entités GC isolées, {len(df_fo)} entités FO isolées.")
