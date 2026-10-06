@@ -28,3 +28,16 @@ Mise en place d'un Data Gatekeeper en Python. L'ETL ingère les données brutes 
 
 **Le ROI (Cost Avoidance):**
 Protection totale de la base de données spatiale (PostgreSQL/PostGIS) contre les corruptions humaines. L'éradication du Garbage In supprime les temps morts d'audit manuel. Le Schedule Variance est sécurisé grâce à une fiabilité absolue des dépendances (GC validé -> FO libérée).
+
+### [CORE 1 Zero-Touch ETL & Fail-Fast UI Architecture]
+* **[Delivered : 2026-10-02]**
+*Objectif Principal :* Architecturer un pipeline OSP de collecte hermétique via QField (SQL Constraints, UI Conditionnelle) et un pont ETL Python automatisé pour l'extraction et la normalisation des livrables terrain.
+
+**[FR] L'Enjeu (Heavy Civils) :** Dans les projets de dévoiement réseaux (Tramway, BHNS), une chambre télécom déclarée "bloquée" sans preuve photographique génère des litiges avec le Génie Civil, des pénalités de retard et des interventions terrain redondantes.
+**[EN] The Challenge (Heavy Civils):** In major network relocation projects (Light Rail, BRT), a telecom manhole reported as "blocked" without photographic evidence triggers disputes with Civil Engineering contractors, schedule penalties, and redundant field interventions.
+
+**[FR] La Solution (Zero-Touch Data Flow & Scalability) :** Une architecture dédoublée. Un Frontend mobile (QField) verrouillé par des expressions régulières et de la logique booléenne qui force la saisie de preuves visuelles et auto-calcule le statut de l'audit. Un Backend Python qui ingère les archives en mode Batch, ignorant les fichiers inutiles et renommant les livrables selon une nomenclature stricte dictée par la base de données.
+**[EN] The Solution (Zero-Touch Data Flow & Scalability):** A decoupled architecture. A mobile Frontend (QField) locked down by regular expressions and Boolean logic that enforces visual evidence capture and auto-calculates audit statuses. A Python Backend that ingests field archives in Batch mode, discarding junk files and renaming deliverables using a strict nomenclature dictated by the Single Source of Truth (Database).
+
+**[FR] Le ROI (Cost Avoidance & Schedule Variance) :** Éradication totale des erreurs de saisie (Data Normalization à 100%). Réduction du temps de traitement post-terrain de plusieurs heures à 3 secondes via l'ETL. Sécurisation juridique immédiate des points de blocage face aux sous-traitants.
+**[EN] The ROI (Cost Avoidance & Schedule Variance):** Total eradication of data entry errors (100% Data Normalization). Reduction of post-field processing time from several hours down to 3 seconds via the ETL pipeline. Immediate legal safeguarding of blocked infrastructure points against subcontractors.

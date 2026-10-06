@@ -38,3 +38,15 @@ Welcome to my production-ready repository dedicated to Outside Plant (OSP) engin
 
 python src/etl_ingestion.py
 #Output triggers validation: "Routing System Check: X GC isolated, Y FO isolated."
+
+### [CORE 1 Zero-Touch ETL & Fail-Fast UI Architecture]
+* **[Delivered : 2026-10-02]**
+
+**Business Problem:** Field data collection in Heavy Civil and OSP (Outside Plant) environments suffers from high "Garbage In" rates due to poor UI constraints, manual data entry errors, and disconnected photo management. This leads to severe Schedule Variances and administrative overhead during As-Built documentation.
+Tech Stack: QGIS, QField, SQLite (GeoPackage), Python 3.12 (shutil, sqlite3, re), Regex.
+Core Logic:
+
+**Frontend (Fail-Fast UI):** Implementation of Drag & Drop Designer in QGIS with SQL-driven Conditional Visibility (Kill-Switch) and Regex constraints to physically block invalid data entry at the source.
+
+**Backend (Zero-Touch ETL):** Python batch processing script that extracts QField zip returns, queries the SQLite GeoPackage as the Single Source of Truth, sanitizes Windows file paths, and routes only validated photographic evidence to the final production folder.
+Command Ledger (Production-Ready): (See Document A for full SQL/Python syntax ledgers).
