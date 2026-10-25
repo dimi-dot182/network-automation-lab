@@ -50,3 +50,14 @@ Core Logic:
 
 **Backend (Zero-Touch ETL):** Python batch processing script that extracts QField zip returns, queries the SQLite GeoPackage as the Single Source of Truth, sanitizes Windows file paths, and routes only validated photographic evidence to the final production folder.
 Command Ledger (Production-Ready): (See Document A for full SQL/Python syntax ledgers).
+### 🏗️ CORE 1 : Pandas OSP Data Ingestion & Auditing
+- **[Delivered: 2026-10-25]**
+
+**[FR] L'Enjeu :** L'ingestion aveugle de données terrain (QField/DOE) incomplètes provoque un effet GIGO (Garbage In, Garbage Out) qui fait crasher les bases de données spatiales et ralentit les livrables d'ingénierie.
+**[EN] The Challenge:** Blind ingestion of incomplete field data (QField/As-Builts) triggers a GIGO effect, crashing spatial databases and delaying engineering deliverables.
+
+**[FR] La Solution (Zero-Touch Data Flow) :** Implémentation d'un script d'audit Python/Pandas effectuant une purge stricte (Hard Purge) des assets sans coordonnées X/Y et une normalisation (Soft Fix) des métadonnées, sécurisant l'intégrité avant l'export PostGIS/QGIS.
+**[EN] The Solution (Zero-Touch Data Flow):** Implemented a Python/Pandas auditing script performing a 'Hard Purge' of assets lacking X/Y coordinates and a 'Soft Fix' for metadata, securing data integrity prior to PostGIS/QGIS export.
+
+**[FR] Le ROI (Cost Avoidance & Schedule Variance) :** Élimination totale des heures de QA/QC manuelles en bureau d'études. Sécurisation des plannings d'intégration spatiale.
+**[EN] The ROI (Cost Avoidance & Schedule Variance):** Total elimination of manual QA/QC hours in the design office. Bulletproof spatial integration schedules.

@@ -41,3 +41,15 @@ Protection totale de la base de données spatiale (PostgreSQL/PostGIS) contre le
 
 **[FR] Le ROI (Cost Avoidance & Schedule Variance) :** Éradication totale des erreurs de saisie (Data Normalization à 100%). Réduction du temps de traitement post-terrain de plusieurs heures à 3 secondes via l'ETL. Sécurisation juridique immédiate des points de blocage face aux sous-traitants.
 **[EN] The ROI (Cost Avoidance & Schedule Variance):** Total eradication of data entry errors (100% Data Normalization). Reduction of post-field processing time from several hours down to 3 seconds via the ETL pipeline. Immediate legal safeguarding of blocked infrastructure points against subcontractors.
+
+### 🏗️ CORE 1 : Pandas OSP Data Ingestion & Auditing
+- **[Delivered: 2026-10-25]**
+
+**[FR] L'Enjeu :** L'ingestion aveugle de données terrain (QField/DOE) incomplètes provoque un effet GIGO (Garbage In, Garbage Out) qui fait crasher les bases de données spatiales et ralentit les livrables d'ingénierie.
+**[EN] The Challenge:** Blind ingestion of incomplete field data (QField/As-Builts) triggers a GIGO effect, crashing spatial databases and delaying engineering deliverables.
+
+**[FR] La Solution (Zero-Touch Data Flow) :** Implémentation d'un script d'audit Python/Pandas effectuant une purge stricte (Hard Purge) des assets sans coordonnées X/Y et une normalisation (Soft Fix) des métadonnées, sécurisant l'intégrité avant l'export PostGIS/QGIS.
+**[EN] The Solution (Zero-Touch Data Flow):** Implemented a Python/Pandas auditing script performing a 'Hard Purge' of assets lacking X/Y coordinates and a 'Soft Fix' for metadata, securing data integrity prior to PostGIS/QGIS export.
+
+**[FR] Le ROI (Cost Avoidance & Schedule Variance) :** Élimination totale des heures de QA/QC manuelles en bureau d'études. Sécurisation des plannings d'intégration spatiale.
+**[EN] The ROI (Cost Avoidance & Schedule Variance):** Total elimination of manual QA/QC hours in the design office. Bulletproof spatial integration schedules.
