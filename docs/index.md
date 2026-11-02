@@ -53,3 +53,47 @@ Protection totale de la base de données spatiale (PostgreSQL/PostGIS) contre le
 
 **[FR] Le ROI (Cost Avoidance & Schedule Variance) :** Élimination totale des heures de QA/QC manuelles en bureau d'études. Sécurisation des plannings d'intégration spatiale.
 **[EN] The ROI (Cost Avoidance & Schedule Variance):** Total elimination of manual QA/QC hours in the design office. Bulletproof spatial integration schedules.
+
+### 🏗️ CORE-3 SPATIAL DATA AUTOMATION : Automated Clash Detection & Dynamic PDF Layout Engine (Tramway T8)
+- **[Delivered: 2026-10-28]**
+
+#### 1. ENTERPRISE MISSION & SCENARIO
+- **[FR]** Extraction et agrégation des volumes de câbles OSP (FTTH, Backbone) impactés par l'emprise des travaux du Tramway T8 pour estimer le CAPEX de dévoiement.
+- **[EN]** Extraction and aggregation of impacted OSP cable volumes (FTTH, Backbone) within the Tramway T8 construction ROW to estimate relocation CAPEX.
+
+#### 2. THE BOTTLENECK
+- **[FR]** Les manipulations manuelles (GIGO) génèrent des erreurs de métrés (câbles fantômes) et la mise en page manuelle QGIS engendre un Schedule Variance massif.
+- **[EN]** Manual GIS manipulation (GIGO) generates ghost cables, and manual layout drafting causes massive Schedule Variance per revision.
+
+#### 3. THE AUTOMATED SOLUTION
+- **[FR]** Création d'un pipeline PyQGIS couplé à Pandas pour extraire les géométries, calculer les pourcentages par type de réseau, et générer un Master Plan PDF à dimensionnement dynamique (A3/A0, Portrait/Paysage) de manière 100% Zero-Touch.
+- **[EN]** PyQGIS pipeline coupled with Pandas to extract geometries, aggregate percentages by network type, and output a dynamically sized Master Plan PDF (A3/A0, Portrait/Landscape) using a 100% Zero-Touch workflow.
+
+#### 4. EXECUTIVE ROI (Cost Avoidance)
+- **[FR]** Suppression de ~100 km de câbles erronés du budget initial (Cost Avoidance). Temps de production du livrable client divisé par 100.
+- **[EN]** Eradication of ~100 km of ghost cables from the CAPEX baseline (Cost Avoidance). Client deliverable production time slashed by 99%.
+
+#### 5. TECH STACK & EXECUTION
+**Stack :** QGIS, Python 3.12 (PyQGIS), Pandas, Git.
+
+### 🏗️ CORE-1 : Advanced Spatial Logic Routing (Tramway T8)
+- **[Delivered: 2026-10-28]**
+
+#### 1. ENTERPRISE MISSION & SCENARIO
+- **[FR]** Pilotage automatisé des dévoiements réseaux (OSP) sur un projet d'infrastructure lourde (Tram T8), avec routage conditionnel Backbone vs DRET.
+- **[EN]** Automated OSP utility relocation management for Heavy Civils, featuring conditional spatial routing for Backbone vs DRET.
+
+#### 2. THE BOTTLENECK
+- **[FR]** DXF sources corrompus (Dangling Nodes) bloquant l'extraction spatiale et générant des surcoûts matériels (GIGO).
+- **[EN]** Corrupted source DXF files (Dangling Nodes) blocking spatial extraction and generating material overcosts (GIGO).
+
+#### 3. THE AUTOMATED SOLUTION
+- **[FR]** Pipeline Python de "Topology Healing" (Snapping/Dissolve) suivi d'un moteur de routage croisant l'intersection chirurgicale et l'extraction binaire.
+- **[EN]** Python "Topology Healing" pipeline (Snapping/Dissolve) followed by a routing engine blending surgical intersection and binary extraction.
+
+#### 4. EXECUTIVE ROI (Cost Avoidance)
+- **[FR]** Zero-Touch Data Flow : 100% des erreurs CAO contournées automatiquement, visibilité CAPEX/OPEX immédiate via Dashboard.
+- **[EN]** Zero-Touch Data Flow: 100% of CAD errors bypassed automatically, immediate CAPEX/OPEX visibility via Dashboard.
+
+#### 5. TECH STACK & EXECUTION
+**Stack :** Python 3.12, PyQGIS, QGIS Processing (Snap, Dissolve, Intersection, ExtractByLocation)
