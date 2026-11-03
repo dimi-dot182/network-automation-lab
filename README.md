@@ -106,3 +106,31 @@ Command Ledger (Production-Ready): (See Document A for full SQL/Python syntax le
 
 #### 5. TECH STACK & EXECUTION
 **Stack :** Python 3.12, PyQGIS, QGIS Processing (Snap, Dissolve, Intersection, ExtractByLocation)
+
+### 🏗️ LAB_CORE1_S02 : PostGIS Spatial Data Normalization
+- **[Delivered: 2026-11-03]**
+
+#### 1. ENTERPRISE MISSION & SCENARIO
+- **[FR]** Standardiser les flux de données spatio-financiers pour les infrastructures OSP lourdes via une source de vérité relationnelle.
+- **[EN]** Standardize spatio-financial data flows for heavy OSP infrastructure via a relational source of truth.
+
+#### 2. THE BOTTLENECK
+- **[FR]** L'ingestion sans contrainte provoque du GIGO, des doublons de projets, et des erreurs de rapports CAPEX.
+- **[EN]** Unconstrained ingestion causes GIGO, project duplication, and CAPEX reporting errors.
+
+#### 3. THE AUTOMATED SOLUTION
+- **[FR]** BDD SQLite avec `PRIMARY KEY` stricte sur l'ID projet, interfacée avec Pandas pour une agrégation analytique rapide.
+- **[EN]** SQLite DB with strict `PRIMARY KEY` on project ID, bridged with Pandas for rapid analytical aggregation.
+
+#### 4. EXECUTIVE ROI (Cost Avoidance)
+- **[FR]** Bloque 100% des doublons à l'ingestion ; agrégation des coûts instantanée sans consolidation manuelle.
+- **[EN]** Blocks 100% of duplicates at ingestion; instant cost aggregation without manual consolidation.
+
+#### 5. TECH STACK & EXECUTION
+**Stack :** Python 3.12, SQLite3, Pandas
+```bash
+# Architecture Validation & Code Integration
+git add osp_db_schema.py osp_db_insert.py osp_db_pandas.py
+git add TECH_GLOSSARY_MASTER.md README.md index.md
+git commit -m "feat(core1): deploy strict relational schema and Pandas ETL pipeline"
+git push origin main
